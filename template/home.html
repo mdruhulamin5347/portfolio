@@ -74,35 +74,23 @@
 			.email {
 				display: block;
 			}
-			.home-slider .slider-item .pythondjangodeveloper {
-				font-size: 20px;
-				color: black;
-			}
-			.iammdruhulamin {				
-				color: #fff;
-			}
+
 		}
 		
 		  
 
-		.wrapper {
-			height: 100vh;
-			/* This part is important for centering */
-			display: grid;
-			place-items: center;
-		  }
 	
 		  .typing-demo {
-			width: 22ch;
+			width: 100%; /* Make the width responsive */
 			white-space: nowrap;
 			overflow: hidden;
 			border-right: 3px solid;
 			font-family: monospace;
-			font-size: 2em;
+			font-size: 2em; /* Default font size */
 			animation: typing 4s steps(22) infinite,
 			  blink 0.5s step-end infinite alternate;
 		  }
-	
+		  
 		  @keyframes typing {
 			0% {
 			  width: 0;
@@ -114,7 +102,7 @@
 			  width: 0;
 			}
 		  }
-	
+		  
 		  @keyframes blink {
 			from,
 			to {
@@ -124,32 +112,11 @@
 			  border-color: black;
 			}
 		  }
+		  #home-section {
+			overflow-y: auto !important;
+		  }
 
-		
-        
-        /* The typing effect */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        /* The deleting effect */
-        @keyframes deleting {
-            from { width: 100% }
-            to { width: 0 }
-        }
-        
-        /* The cursor effect */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: black; }
-        }
-        
-        /* Loop effect */
-        @keyframes loop {
-            0%, 50% { width: 0 }
-            25%, 75% { width: 100% }
-        }
+		  
     </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -184,7 +151,7 @@
 			<div class="slider-item">
 				<div class="overlay"></div>
 				<div class="container-fluid px-md-0">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="false">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
 						<div class="one-third order-md-last img" style="background-image:url({{carousol.image.url}});">
 							<div class="overlay"></div>
 							<div class="overlay-1"></div>
@@ -192,7 +159,7 @@
 						<div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
 								<span class="iammdruhulamin subheading">{{carousol.title}}</span>
-								<h1 class="pythondjangodeveloper typing-demo mb-3 mt-3 text-sm" style="font-size: 40px;">{{carousol.highlight_title}}</h1></span>
+								<h1 class="pythondjangodeveloper typing-demo mb-3 mt-3 text-sm" >{{carousol.highlight_title}}</h1>
 								<!-- <div class="wrapper">
 									<div class="typing-demo">This is a typing demo.</div>
 								</div> -->
@@ -448,7 +415,7 @@
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
 							<h3><a href="#">{{i.project_name}}</a></h3>
-							<span style="color:wheat">{{i.project_title}}</span>
+							<span>{{i.project_title}}</span>
 						</div>
 					</div>
 				</div>
